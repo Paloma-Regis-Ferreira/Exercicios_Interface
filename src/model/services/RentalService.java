@@ -11,10 +11,13 @@ public class RentalService {
 	private TaxService taxService;
 
 	public RentalService(Double pricePerDay, Double pricePerHour, TaxService taxService) {//alguns frameworks exigem construtor vazio (padrão) na model.entities
+		//injeção de dependencia do construtor no rental service, uma das formas de inversao de controle, de tirar da classe a obrigação de instanciar suas dependecias
 		super();
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;
-		this.taxService = taxService;
+		this.taxService = taxService;//inversao de controle: tira da classe a obrigação de instanciar suas dependencias
+		//sem injeção de dependencia e forte acoplamento:
+		//this.taxService = new BrasilTaxService();
 	}
 	
 	public void processInvoice(CarRental carRental) {

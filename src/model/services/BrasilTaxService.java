@@ -1,6 +1,6 @@
 package model.services;
 
-public class BrasilTaxService {
+public class BrasilTaxService implements TaxService{
 	
 	public double tax(double amount) {//vai retornar double, entao não tem problema não ser Warpper class
 		if(amount <= 100.0) {

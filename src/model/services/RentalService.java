@@ -8,9 +8,9 @@ public class RentalService {
 	private Double pricePerDay;
 	private Double pricePerHour;
 	
-	private BrasilTaxService taxService;
+	private TaxService taxService;
 
-	public RentalService(Double pricePerDay, Double pricePerHour, BrasilTaxService taxService) {//alguns frameworks exigem construtor vazio (padrão) na model.entities
+	public RentalService(Double pricePerDay, Double pricePerHour, TaxService taxService) {//alguns frameworks exigem construtor vazio (padrão) na model.entities
 		super();
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;

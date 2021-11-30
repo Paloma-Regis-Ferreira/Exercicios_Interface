@@ -40,7 +40,7 @@ public class Main {
 		double precoPorDia = sc.nextDouble();
 		
 		//instanciando o serviço do aluguel
-		RentalService rentalService = new RentalService(precoPorDia, precoPorHora, new BrasilTaxService());
+		RentalService rentalService = new RentalService(precoPorDia, precoPorHora, new BrasilTaxService());//a taxa passa a ser implementada só aqui
 		
 		//processando o faturamento do aluguel
 		rentalService.processInvoice(cr);
